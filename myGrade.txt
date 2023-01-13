@@ -1,0 +1,54 @@
+#!/bin/bash
+# student name: Yalin Su
+# student number: 040791845
+# course: Operating Systems fund
+# Section: CST8102 320_Lab7
+# Description: the purpose of this lab is to create a script that will calculate the final grade and display the letter grade for a course
+
+read -p "Enter Assignment mark (0 - 40): " assignmentMark
+read -p "Enter Test 1 mark (0 - 15): " test1
+read -p "Enter Test 2 mark (0 - 15): " test2
+read -p "Enter Final exam mark (0 - 30): " finalExamMark
+((result=assignmentMark+test1+test2+finalExamMark))
+echo "Your final numeric grade is: " $result
+if [[ $result -ge 90 ]] && [[ $result -le 100 ]]
+then
+	echo "and your final letter grade is A+"
+elif [[ $result -ge 85 ]] && [[ $result -le 89 ]]
+then
+	echo "and your final letter grade is A"
+elif [[ $result -ge 80 ]] && [[ $result -le 84 ]]
+then
+	echo "and your final letter grade is A-"
+elif [[ $result -ge 77 ]] && [[ $result -le 79 ]]
+then
+	echo "and your final letter grade is B+"
+elif [[ $result -ge 73 ]] && [[ $result -le 76 ]]
+then
+	echo "and your final letter grade is B"
+elif [[ $result -ge 70 ]] && [[ $result -le 72 ]]
+then
+	echo "and your final letter grade is B-"
+elif [[ $result -ge 67 ]] && [[ $result -le 69 ]]
+then
+	echo "and your final letter grade is C+"
+elif [[ $result -ge 63 ]] && [[ $result -le 66 ]]
+then
+	echo "and your final letter grade is C"
+elif [[ $result -ge 60 ]] && [[ $result -le 62 ]]
+then
+	echo "and your final letter grade is C-"
+elif [[ $result -ge 57 ]] && [[ $result -le 59 ]]
+then
+	echo "and your final letter grade is D+"
+elif [[ $result -ge 53 ]] && [[ $result -le 56 ]]
+then
+	echo "and your final letter grade is D"
+elif [[ $result -ge 50 ]] && [[ $result -le 52 ]]
+then
+	echo "and your final letter grade is D-"
+elif [[ $result -ge 0 ]] && [[ $result -le 49 ]]
+then
+	echo "and your final letter grade is F"
+fi
+
